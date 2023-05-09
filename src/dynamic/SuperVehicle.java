@@ -3,7 +3,7 @@ package dynamic;
 import java.util.HashSet;
 import java.util.Set;
 
-abstract class SuperVehicle {
+public class SuperVehicle {
 
     private String name;
     private int maxSpeed;

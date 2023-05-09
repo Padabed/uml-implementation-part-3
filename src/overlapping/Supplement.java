@@ -53,7 +53,10 @@ public class Supplement {
         return "has no recommendations";
     }
 
-    public double getStrength() {
+    public double getStrength() throws IllegalAccessException {
+        if (!this.components.contains(Component.Alcohol)) {
+            throw new IllegalAccessException("Does not contain any alcohol but not sure");
+        }
         return strength;
     }
 
@@ -68,6 +71,9 @@ public class Supplement {
     }
 
     public double getMaxDose() {
+        if (maxDose == null) {
+            throw new IllegalAccessError("Max does is not provided");
+        }
         return maxDose;
     }
 
